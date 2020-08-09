@@ -1,29 +1,28 @@
 // main start
-​
+
 // 1年後のメッセージがここに入ります。
 let yourFeatureLetter = "";
-​
+
 // 今のあなたのValueの達成度入れてみ？
 let achievementOfABHAGDriven = 80;
 let achievementOfIcebergMind = 80;
 let achievementOfGrowingTogether = 80;
-​
-​
+
 let firstMessage  = "ゲバリオンよ。POL楽しんでますか？";
 let endMessage = "ま、これからも頑張るんやで。Plus Ultraやで";
-​
+
 yourFeatureLetter += firstMessage;
 yourFeatureLetter += checkBHAGDriven(achievementOfABHAGDriven);
 yourFeatureLetter += checkIcebergMind(achievementOfIcebergMind);
 yourFeatureLetter += checkGrowingTogether(achievementOfGrowingTogether);
-​
+
 yourFeatureLetter += endMessage;
 outputYourFeatureLetter(achievementOfABHAGDriven, achievementOfIcebergMind, achievementOfGrowingTogether);
-​
+
 // main end
-​
+
 // function start
-​
+
 function checkBHAGDriven(achievement) {
     let bHAGDrivenMessage = "BHAG Drivenの達成度は" + achievement + "か。";
     if(achievement >= 80){
@@ -44,7 +43,7 @@ function checkBHAGDriven(achievement) {
     }
     return bHAGDrivenMessage;
 }
-​
+
 function checkIcebergMind(achievement) {
     let icebergMindMessage = "Iceberg Mindの達成度は" + achievement + "か。";
     if(achievement >= 80){
@@ -65,7 +64,7 @@ function checkIcebergMind(achievement) {
     }
     return icebergMindMessage;
 }
-​
+
 function checkGrowingTogether(achievement) {
     let growingTogetherMessage = "Growing Togetherの達成度は" + achievement + "か。";
     if(achievement >= 80){
@@ -86,9 +85,8 @@ function checkGrowingTogether(achievement) {
     }
     return growingTogetherMessage;
 }
-​
+
 function outputYourFeatureLetter(bHAG, iceberg, groToge) {
-​
     if(bHAG  >= 80 && iceberg >= 80 && groToge >= 80){
         console.log(yourFeatureLetter);
     } else if(bHAG  >= 50  || iceberg >= 50 || groToge >= 50){
