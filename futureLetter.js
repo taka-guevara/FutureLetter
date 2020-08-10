@@ -4,9 +4,9 @@
 let yourFeatureLetter = "";
 
 // 今のあなたのValueの達成度入れてみ？
-let achievementOfABHAGDriven = 80;
-let achievementOfIcebergMind = 80;
-let achievementOfGrowingTogether = 80;
+let achievementOfABHAGDriven = 20;
+let achievementOfIcebergMind = 20;
+let achievementOfGrowingTogether = 20;
 
 let firstMessage  = "ゲバリオンよ。POL楽しんでますか？";
 let endMessage = "ま、これからも頑張るんやで。Plus Ultraやで";
@@ -17,7 +17,7 @@ yourFeatureLetter += checkIcebergMind(achievementOfIcebergMind);
 yourFeatureLetter += checkGrowingTogether(achievementOfGrowingTogether);
 
 yourFeatureLetter += endMessage;
-outputYourFeatureLetter(achievementOfABHAGDriven, achievementOfIcebergMind, achievementOfGrowingTogether);
+outputYourFeatureLetter(achievementOfABHAGDriven, achievementOfIcebergMind, achievementOfGrowingTogether, yourFeatureLetter);
 
 // main end
 
@@ -86,13 +86,22 @@ function checkGrowingTogether(achievement) {
     return growingTogetherMessage;
 }
 
-function outputYourFeatureLetter(bHAG, iceberg, groToge) {
-    if(bHAG  >= 80 && iceberg >= 80 && groToge >= 80){
-        console.log(yourFeatureLetter);
-    } else if(bHAG  >= 50  || iceberg >= 50 || groToge >= 50){
-        console.warn(yourFeatureLetter);
+/**
+ * 達成度に応じてメッセージの表示方法を変えて出力する
+ * @param {*} bHagAchievement BHAGDrivenの達成度
+ * @param {*} icebergAchievement IcebergMindの達成度
+ * @param {*} growingTogetherAchievement GrowingTogetherの達成度
+ * @param {*} featureLetter 出力する手紙
+ */
+function outputYourFeatureLetter(
+    bHagAchievement, icebergAchievement, 
+    growingTogetherAchievement, featureLetter) {
+    if(bHagAchievement  >= 80 && icebergAchievement >= 80 && growingTogetherAchievement >= 80){
+        console.log(featureLetter);
+    } else if(bHagAchievement  >= 50  || icebergAchievement >= 50 || growingTogetherAchievement >= 50){
+        console.warn(featureLetter);
     } else {
-        console.error(yourFeatureLetter); 
+        console.error(featureLetter); 
     }       
 }
 // function end
